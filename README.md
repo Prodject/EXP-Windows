@@ -1,6 +1,6 @@
 # EXP-Windows
 
-This script was beautifully made by MidNightSonne (me), it is supposed to exploit and gain access to Windows computers.
+This script was developed so that you can use a Windows device without someone noticing it, all you need is a computer with Linux and a few seconds with the Windows computer that will be hacked, unfortunately this step is important since we need to install our infected program on this computer.
 
 ### Prerequisites
 

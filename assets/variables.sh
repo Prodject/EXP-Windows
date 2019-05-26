@@ -2,7 +2,7 @@
 
 ScriptAuthor="MidNightSonne"
 ScriptName="EXP-Windows"
-ScriptVersion="1.0-0"
+ScriptVersion="1.0-1"
 ConfigVersion="1.0-0"
 
 BashVersion="${BASH_VERSINFO[0]}.${BASH_VERSINFO[1]}"
