@@ -2,8 +2,8 @@
 
 ScriptAuthor="MidNightSonne"
 ScriptName="EXP-Windows"
-ScriptVersion="1.0-1"
-ConfigVersion="1.0-0"
+ScriptVersion="1.1-5"
+ConfigVersion="1.0-1"
 
 BashVersion="${BASH_VERSINFO[0]}.${BASH_VERSINFO[1]}"
 MinBashVersion="4.4"
@@ -42,6 +42,13 @@ Exe_Name="Upgrader"
 Exe_Path="/var/www/html/$Exe_Name.exe"
 Index_Path="/var/www/html/index.html"
 Meterpreter_Path="/tmp/metasploit.sh"
+
+urlgithub="https://raw.githubusercontent.com/midnightsonne/EXP-Windows/master/"
+urlvariables="${urlgithub}assets/variables.sh"
+urlconfig="${urlgithub}.config"
+
+exploitw_last_version=$(timeout -s SIGTERM 15 curl -L "${urlvariables}" 2> /dev/null | grep "ScriptVersion=" | head -n 1 | cut -d "\"" -f 2)
+config_last_version=$(timeout -s SIGTERM 15 curl -L "${urlvariables}" 2> /dev/null | grep "ConfigVersion=" | head -n 1 | cut -d "\"" -f 2)
 
 LHOST=$(ip a | grep "scope global" | grep -Po '(?<=inet )[\d.]+')
 LPORT="4444"

@@ -29,15 +29,12 @@ check_root
 check_bash
 check_caps
 check_updt
-check_dpkg
 
 echo -en $CLYW "\n Press [ENTER] to continue ... "
 read continue
 
 echo -en "\n ${CAMRK} Generating All Necessary Files ... "
 
-apacheserver
-
-metasploit
+start_script
 
 end_script
